@@ -6,12 +6,6 @@
 .responsive-canvas{
   max-width: 100%;
   height: auto;
-  width: 100%;
-}
-.responsive-img{
-	max-width: 100%;
-	height: auto;
-	width: 100%;
 }
 .text-barimage{
     font-size:2rem;
