@@ -1,5 +1,5 @@
 $(function() {
-	if((/chrom(e|ium)/.test(navigator.userAgent.toLowerCase()))){
+	if(!(/chrom(e|ium)/.test(navigator.userAgent.toLowerCase()))){
 		$("#holderimage").css("width","100%");
 		$("#canvas-display").css("width","100%");
 	}
