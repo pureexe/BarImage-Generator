@@ -1,0 +1,47 @@
+.outer-container{
+    width: 100%;
+    height: 100vh;
+}
+.inner-container{
+    width: 100%;
+}
+.card-titlepanel{
+    border-bottom: 1px solid rgba(160,160,160,0.2);
+    padding: 20px;
+}
+.card-titlepanel> span{
+    font-size: 1.5rem;
+}
+#blackDisplay{
+    height:8rem;
+}
+#whiteDisplay{
+    height:8rem;
+}
+
+#blackDisplay > div{
+    width: 100%
+}
+#whiteDisplay > div{
+    width: 100%;
+    color: white;
+}
+#train-link{
+    width: 100%;
+    display:none;
+}
+#clickrow{
+    margin-bottom: 0px;
+}
+#maincard{
+    display: inline-block;
+}
+.cover-clickdiv{
+ display: block;
+}
+#train-loading{
+    display: none;
+}
+#result-msg{
+    display: none;
+}

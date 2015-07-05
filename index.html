@@ -1,0 +1,53 @@
+<html lang="en">
+    <head>
+        <link href="css/materialize.min.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>BlackWhiteSVM - sample SVM machine learning</title>
+    </head>
+    <body class="grey lighten-4">
+        <div class="valign-wrapper valign outer-container">
+            <div class="center inner-container">
+                <div id="maincard" class="card">
+                    <div class="card-titlepanel">
+                        <span class="center-align">Which one can you read more easily?</span>
+                    </div>
+                    <div class="card-content">
+                        <div id="clickrow" class="row">
+                            <div class="col s6">
+                                <div class="waves-effect waves-light cover-clickdiv z-depth-1">
+                                    <div id="blackDisplay" class="valign-wrapper">
+                                        <div class="valign">
+                                            <span id="blackMessage">This One</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s6">
+                                <div class="waves-effect waves-light cover-clickdiv z-depth-1">
+                                    <div id="whiteDisplay" class="valign-wrapper">
+                                        <div class="valign">
+                                            <span id="whiteMessage">This One</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="train-link" href="#" class="waves-effect">
+                        <div class="card-action center">
+                            <span id="train-msg">Train with Support Vector Machine (SVM)</span>
+                            <span id="train-loading">Training...</span>
+                            <span id="result-msg">Next Color</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/machine_learning.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
