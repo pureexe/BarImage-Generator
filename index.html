@@ -1,0 +1,114 @@
+<html lang="en">
+    <head>
+        <link href="css/materialize.min.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <title>ฺBar Image Generator - Pure's app</title>
+    </head>
+    <body class="grey lighten-4">
+        <div id="fb-root"></div>
+        <div id="global-row" class="row">
+            <div class="col s12 l9 canvas-panel">
+                <div class="light-blue white-text darken-1 hide-on-large-only app-header">
+                    <div class="center width-full">
+                        <span class="text-barimage">Bar Image</span> <span class="text-generator">Generator</span>
+                    </div>
+                </div>
+                <div id="canvas-wrapper" class="valign-wrapper">
+                    <div class="center valign width-full">
+                        <div id="canvas-card" class="card">
+                            <div style="padding:0.5rem">
+                                <a href="#" class="upload-button choose-image-holder">
+                                    <img src="img/placeholder.png" class="responsive-img " />
+                                </a>
+                                <canvas id="canvas-display" class="responsive-canvas" height="255" width="400" style="display:none;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col s12 l3 white z-depth-1">
+                <div class="light-blue white-text darken-1 hide-on-med-and-down app-header">
+                    <div class="center width-full">
+                        <span class="text-barimage">Bar Image</span> <span class="text-generator">Generator</span>
+                    </div>
+                </div>
+                <div>
+                     <div id="choose-image" class="center choose-image-holder">
+                        <a href="#" class="btn waves-effect waves-light upload-button"><span class="span-near-icon">Choose Image</span> <i class="mdi-action-note-add"></i></a>
+                    </div>
+                    <div id="image-tool" style="display:none;">
+                    <div class="padding-ten">
+                        <form action="#" style="margin:0px;">
+                            <i class="mdi-action-perm-identity range-icon" ></i>
+                            <p class="range-field">
+                                <input type="range" id="contrast-input" min="0" value="50" max="100" />
+                            </p>
+                             <i class="mdi-action-account-box range-icon"></i>
+                        </form>
+                    </div>
+                    <div class="padding-ten">
+                        <form action="#" style="margin:0px;">
+                            <i class="mdi-action-view-agenda range-icon"></i>
+                            <p class="range-field">
+                                <input type="range" id="rows-input" min="0" value="50" max="100" />
+                            </p>
+                             <i class="mdi-action-view-headline range-icon"></i>
+                        </form>
+                    </div>
+                    <div class="center " class="padding-ten">
+                        <a id="download-btn" href="#" class="btn waves-effect waves-light" style="margin-right:0.5rem;margin-bottom:0.5rem">
+                            <span class="span-near-icon">Download</span> <i class="mdi-action-get-app"></i>
+                        </a>
+                        <a href="#" class="btn waves-effect waves-light upload-button" style="margin-bottom:0.5rem;">
+                            <i class="mdi-action-note-add"></i>
+                        </a>
+                    </div>                    
+                    </div>
+                   <div class="center" style="padding:10px;">
+                        <a href="https://www.pureapp.in.th/2015/07/barimage-generator-explain.html" target="_blank">วิธีการใช้งาน</a>
+                    </div>
+                </div>
+                <div id="footer-cover" class="white">
+                    <div style="width:100%;overflow:hidden;height:70px;" class="center">
+                        <div class="fb-page" data-href="https://www.facebook.com/appmadebypure" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false">
+                            <div class="fb-xfbml-parse-ignore">
+                                <blockquote cite="https://www.facebook.com/appmadebypure">
+                                    <a href="https://www.facebook.com/appmadebypure">Pure&#039;s app</a>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="page-footer light-blue darken-1 z-depth-1" style="margin:0px;padding:0px;">
+                        <div  class="footer-copyright light-blue darken-2">
+                            <div style="padding-left:10px;padding-right:10px;">
+                                <div style="width: 100%;overflow: hidden;">
+                                    <span style="margin-right:0.5rem">©2015 <a href="https://www.pureappp.in.th" style="color:rgba(255,255,255,0.8);">Pure's app</a></span>
+                                    <span class="right" style="margin-top:15px;">
+                                        <span style="margin-top:0px;">
+                                        <iframe src="https://ghbtns.com/github-btn.html?user=pureexe&repo=barimage-generator&type=fork&count=true" frameborder="0" scrolling="0" width="90px" height="20px" style="display:inline-block"></iframe>
+                                        </span>
+                                        <span style="margin-top:0px;">
+                                            <div class="fb-like" data-href="https://barimage.pureapp.in.th" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <input type="file" id="file-input" style="display:none;" accept="image/*">
+            </div>
+        </div>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/app.js"></script>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=104824939657274";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    </body>
+</html>
